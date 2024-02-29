@@ -1,0 +1,517 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --DarkBlue-emailbackground: hsl(217, 28%, 15%);
+  --DarkBlue-mainbackground: hsl(218, 28%, 13%);
+  --DarkBlue-footerbackground: hsl(216, 53%, 9%);
+  --other: #181f2b;
+  --DarkBlue-testimonialsbackground: hsl(219, 30%, 18%);
+  --textcolor: #c3c3c3;
+
+  --Cyan: hsl(176, 68%, 64%);
+  --Blue: hsl(198, 60%, 50%);
+  --LightRed-error: hsl(0, 100%, 63%);
+
+  --White: hsl(0, 0%, 100%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--White);
+}
+
+p {
+  color: var(--textcolor);
+}
+
+body {
+  background: var(--other);
+}
+
+.btn {
+  color: var(--White);
+  background-color: var(--Blue);
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: var(--Cyan);
+}
+main {
+  background: var(--DarkBlue-emailbackground);
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 5%;
+  align-items: center;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  color: var(--textcolor);
+  font-size: 14px;
+  list-style: none;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li:hover {
+  color: var(--White);
+  cursor: pointer;
+}
+
+nav ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
+  background-color: var(--White);
+}
+
+nav ul li:hover::before {
+  color: var(--White);
+  height: 1px;
+  cursor: pointer;
+}
+
+main .banner {
+  width: 100%;
+  height: 175vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  z-index: 1;
+}
+
+main .banner .conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 5%;
+}
+
+.conteudo h1 {
+  margin-top: 25px;
+  text-align: center;
+  width: 690px;
+}
+.conteudo p {
+  margin-top: 25px;
+  text-align: center;
+  width: 530px;
+}
+
+.conteudo .btn {
+  margin-top: 30px;
+}
+
+.grid-section {
+  width: 100%;
+  height: 100%;
+  background: var(--other);
+  padding-bottom: 30px;
+}
+
+.grid-section > div {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 40px;
+  column-gap: 80px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-section > div div img {
+  width: 55px;
+  height: 50px;
+}
+.grid-section > div div h5 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.productive {
+  width: 100%;
+  height: 100vh;
+  background: var(--other);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.productive .productive-content {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.productive-content .image img {
+  width: 555px;
+  height: 100%;
+}
+
+.productive-content .content h2 {
+  width: 300px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.productive-content .content p {
+  margin: 20px 0;
+  font-size: 14px;
+}
+.productive-content .content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--Cyan);
+  border-bottom: 1px solid;
+  width: 180px;
+}
+
+.productive-content .content a:hover {
+  color: var(--textcolor);
+}
+
+.productive-content .content a:hover img svg path {
+  fill: var(--textcolor);
+}
+
+.testimonials {
+  padding: 40px 5%;
+  background: var(--other);
+}
+
+.testimonials .testi {
+  margin: 0 auto;
+  width: 96%;
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  width: 50px;
+  z-index: 0;
+}
+
+.testi .testi-coontent {
+  border-radius: 6px;
+  padding: 15px 20px;
+  background: var(--DarkBlue-testimonialsbackground);
+  z-index: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testi-coontent .bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bottom img {
+  border-radius: 50%;
+  width: 36px;
+}
+
+.bottom .bottom-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-content .big {
+  font-weight: 700;
+  color: var(--textcolor);
+}
+.bottom-content .small {
+  font-weight: 100;
+  font-size: 12px;
+  color: var(--textcolor);
+}
+
+footer {
+  margin-top: 302px;
+  background: var(--DarkBlue-footerbackground);
+  position: relative;
+  padding: 220px 5% 70px;
+}
+
+footer .contact-form {
+  width: 860px;
+  height: 270px;
+  background: var(--DarkBlue-emailbackground);
+  position: absolute;
+  top: -150px;
+  left: 13%;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-form p {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.contact-form .input-form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form input {
+  width: 480px;
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+
+.input-form button {
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.footer-content .logo {
+  width: 99px;
+}
+
+.content-conteudo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-conteudo .first {
+  display: flex;
+  font-size: 14px;
+  gap: 30px;
+}
+
+.second-son {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.second-son > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.first .first-son {
+  display: flex;
+  gap: 14px;
+  width: 350px;
+}
+
+.first-son img {
+  width: 20px;
+  height: 20px;
+}
+
+.second {
+  display: flex;
+  gap: 46px;
+}
+
+.second nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--textcolor);
+}
+.second nav ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.second .icons {
+  align-self: flex-start;
+  display: flex;
+  gap: 14px;
+}
+
+@media (max-width: 772px) {
+  main header {
+    padding: 15px 3%;
+  }
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 100;
+    line-height: 1.3;
+  }
+  header .logo img {
+    width: 75px;
+  }
+  header nav ul {
+    gap: 15px;
+    font-size: 12px;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .banner {
+    width: 100%;
+    height: 100%;
+    background: url(/images/bg-curvy-mobile.svg) no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    padding-bottom: 55px;
+  }
+
+  .banner .conteudo {
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+  }
+
+  .banner .conteudo img {
+    width: 100%;
+  }
+  .conteudo h1 {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  .conteudo p {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  .grid-section {
+    padding: 50px 0;
+  }
+  .grid-section > div {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0 5%;
+  }
+  .productive {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+  }
+  .productive .productive-content {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .productive-content .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .productive-content .content h2 {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .testimonials .testi {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer .contact-form {
+    width: 95%;
+    height: 450px;
+    top: -280px;
+    left: 10px;
+    border-radius: 6px;
+  }
+  .contact-form .input-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form p {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .input-form button,
+  .input-form input {
+    width: 100%;
+  }
+
+  .content-conteudo .first,
+  .second-son {
+    gap: 10px;
+  }
+  .footer-content,
+  .content-conteudo,
+  .first,
+  .second,
+  .second nav {
+    flex-direction: column;
+  }
+  .first .first-son {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .second-son {
+    align-self: baseline;
+  }
+
+  .second nav {
+    margin-top: 30px;
+  }
+  .second .icons {
+    align-self: center;
+  }
+}
